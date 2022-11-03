@@ -8,4 +8,3 @@ docker run -d --name proxy_web \
 --net-alias proxy_web \
 -v "$PWD/logs:/var/log/nginx"  \
 drnoreg/proxy_web:0.0.1
-

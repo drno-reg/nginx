@@ -7,11 +7,7 @@ RUN cp /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 WORKDIR /app
 
-COPY src/service-ui/ .
-
-COPY proxy_pass/docker/service-ui/conf.d/* /etc/nginx/conf.d/http/
+COPY proxy_pass/docker/proxy-proxy/conf.d/* /etc/nginx/conf.d/http/
 COPY proxy_pass/docker/nginx.conf /etc/nginx/nginx.conf
-
-EXPOSE 8080
 
 CMD ["nginx", "-g", "daemon off;"]
